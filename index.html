@@ -83,11 +83,23 @@ transform:scale(1.05);
 
 function searchQuestion(){
 
-var q=document.getElementById("question").value;
+var q=document.getElementById("question").value.toLowerCase();
 
-var url="https://www.google.com/search?q="+q+" site:sksatyatools.github.io";
+if(q.includes("thumbnail")){
+window.location.href="ai-thumbnail.html";
+}
 
-window.open(url,"_blank");
+else if(q.includes("shorts")){
+window.location.href="youtube-shorts.html";
+}
+
+else if(q.includes("video")){
+window.location.href="ai-video.html";
+}
+
+else{
+window.open("https://www.google.com/search?q="+q+" site:sksatyatools.github.io");
+}
 
 }
 
@@ -107,7 +119,7 @@ SK Satya Creator Tools
 <a href="youtube-shorts.html">YouTube Help</a>
 <a href="ai-video.html">Free Tools</a>
 <a href="contact.html">Contact</a>
-</div> 
+</div>
 
 <div class="search">
 
