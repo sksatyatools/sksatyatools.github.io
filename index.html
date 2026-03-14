@@ -51,6 +51,7 @@ background:#007BFF;
 color:white;
 border:none;
 border-radius:5px;
+cursor:pointer;
 }
 
 .section{
@@ -78,6 +79,20 @@ transform:scale(1.05);
 
 </style>
 
+<script>
+
+function searchQuestion(){
+
+var q=document.getElementById("question").value;
+
+var url="https://www.google.com/search?q="+q+" site:sksatyatools.github.io";
+
+window.open(url,"_blank");
+
+}
+
+</script>
+
 </head>
 
 <body>
@@ -98,9 +113,9 @@ SK Satya Creator Tools
 
 <h2>AI aur YouTube se related sawal puchiye</h2>
 
-<input placeholder="Apna question likhiye...">
+<input id="question" placeholder="Apna question likhiye...">
 
-<button>Search</button>
+<button onclick="searchQuestion()">Search</button>
 
 </div>
 
